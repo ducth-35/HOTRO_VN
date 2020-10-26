@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">HOTROVN</string>
+    <string name="hotrovn">HOTROVN</string>
+    <string name="lantoaniemvui"> Lan tỏa niềm tin</string>
+    <string name="bandangquantam">Bạn đang quan tâm ?</string>
+    <string name="cancuutro"> Cần cứu trợ</string>
+    <string name="manhthuongquan"> Mạnh thường quân</string>
+    <string name="nhapsdt"> Nhập số điện thoại</string>
+    <string name="tieptheo">Tiếp theo</string>
+    <string name="bangtincuutro">Bảng tin cứu trợ</string>
+    <string name="taobangtincuutro">Tạo bản tin cứu trợ</string>
+    <string name="taochiendich">Tạo chiến dịch</string>
+    <string name="chiendichcuutro">Chiến dịch cứu trợ</string>
+    <string name="chontinh">Chọn tỉnh</string>
+    <string name="chonthanhpho">Chọn thành phố</string>
+    <string name="quanhuyenxa">Quận/Huyện/Xã</string>
+    <string name="vitricuaban">Vị trí của bạn</string>
+    <string name="nguoikeugoi">Người kêu gọi</string>
+    <string name="vaitro">Vai trò</string>
+    <string name="dienthoai">Điện thoại</string>
+    <string name="motatinhhinh">Mô tả tình hình</string>
+    <string name="canhotronhunggi">Cần hỗ trợ những gì ?</string>
+    <string name="themanhtinhhinh">Thêm ảnh tình hình</string>
+    <string name="luu">Lưu</string>
+    <string name="bantincuutrothanhcong">Bản tin cứu trợ thành công !</string>
+    <string name="nhanduocthongbaosom">Các mạnh thường quân sẽ nhận được bản tin cứu trợ của bạn sớm !</string>
+    <string name="xong">Xong</string>
+    <string name="thongtincuutro">Thông tin cứu trợ</string>
+    <string name="dong">Đóng</string>
+    <string name="loctin">Lọc tin</string>
+    <string name="bando">Bản đồ</string>
+    <string name="thongtin">Thông tin</string>
+    <string name="xemchitiet">Xme chi tiết</string>
+    <string name="dangnhap1">Khi đăng nhập, bạn đồng ý với</string>
+    <string name="dangnhap2">Điều khoản dịch vụ và Chính Sách về Sự Riêng Tư của chúng tôi</string>
+    <string name="nguoilienhe">Người liên hệ</string>
+    <string name="tochucdonvi">Tổ chức/Đơn vị</string>
+    <string name="thoigian">Thời gian</string>
+    <string name="mathang">Mặt hàng</string>
+    <string name="themanh">Thêm ảnh mặt hàng </string>
+    <string name="thongtinseduocguiden...">Thông tin sẽ được gửi đến người kêu gọi</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

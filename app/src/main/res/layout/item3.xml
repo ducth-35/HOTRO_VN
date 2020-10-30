@@ -7,9 +7,34 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/custom_radio"
         android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/custom_radio"
         android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:src="@drawable/buildings" />
+
+            <TextView
+                android:id="@+id/building"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Ninh Bình"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+        </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -48,10 +73,12 @@
                 android:src="@drawable/distributed" />
 
             <TextView
-                android:id="@+id/sanpham"
+                android:id="@+id/sanpham_bangtincuutro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:ellipsize="end"
+                android:maxLines="4"
                 android:text="Quần áo, thuốc men, nước uống, các đồ dùng cá nhân và nhu yếu phẩm"
                 android:textColor="@color/black" />
         </LinearLayout>
@@ -69,13 +96,67 @@
                 android:layout_marginRight="@dimen/_20sdp"
                 android:src="@drawable/delivery_cart" />
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="(3)"
+                    android:id="@+id/nguoitao_bangtincuutro"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
             <TextView
-                android:id="@+id/nguoitao"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="Người tạo ciến dịch cứu trợ"
                 android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:src="@drawable/voice_command" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/ten_bantincuutro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Trương Huỳnh ĐỨc | 0329619927"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/chucvu_bantincuutro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Chức vụ"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Phone.PhoneActivity">
+    tools:context=".Phone.Phone2_Activity">
 
 
     <EditText
@@ -34,16 +34,16 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/btn_tieptheo"
+        android:id="@+id/btn_tieptheo2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
         android:layout_marginRight="@dimen/_40sdp"
         android:layout_marginLeft="@dimen/_40sdp"
+        android:layout_marginTop="44dp"
         android:background="@drawable/custom_bottom"
         android:text="@string/tieptheo"
         android:textColor="@color/white"
-        app:layout_constraintTop_toBottomOf="@+id/image_view_flag"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp" />
 
@@ -70,5 +70,28 @@
         app:layout_constraintStart_toEndOf="@+id/image_view_flag"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="@string/dangnhap1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_view_flag"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/dangnhap2"
+        android:textColor="@color/green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

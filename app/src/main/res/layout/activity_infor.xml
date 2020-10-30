@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Chiendichcuutro.Infor">
+    tools:context=".Chiendichcuutro.Infor_Activity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -217,7 +217,7 @@
                         android:layout_width="@dimen/_250sdp"
                         android:layout_height="@dimen/_40sdp"
                         android:layout_marginBottom="@dimen/_20sdp"
-                        android:background="@drawable/custom_radio3">
+                        android:background="@drawable/custom_radio5">
 
                         <ImageView
                             android:layout_width="@dimen/_30sdp"

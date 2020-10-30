@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".News.News">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -12,28 +13,12 @@
         tools:ignore="MissingConstraints">
 
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:id="@+id/rl_setting_acc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true">
-
-
-            <TextView
-                android:id="@+id/AccText"
-                android:layout_width="242dp"
-                android:layout_height="53dp"
-                android:layout_marginStart="28dp"
-                android:layout_marginLeft="28dp"
-                android:fontFamily="sans-serif-thin"
-                android:gravity="center"
-                android:text="@string/bangtincuutro"
-                android:textColor="@color/black"
-                android:textSize="24sp"
-                android:textStyle="italic"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/img_back5"
-                app:layout_constraintTop_toTopOf="parent" />
+            android:layout_alignParentTop="true"
+            android:weightSum="3">
 
             <ImageView
                 android:id="@+id/img_back5"
@@ -44,6 +29,7 @@
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="2dp"
+                android:layout_weight="1"
                 android:background="#00FFFFFF"
                 android:src="@drawable/quaylai"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -51,17 +37,26 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0" />
 
+            <TextView
+                android:id="@+id/AccText"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-thin"
+                android:gravity="center|left"
+                android:text="@string/thongtincuutro"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
             <ImageView
                 android:id="@+id/imageView2"
                 android:layout_width="@dimen/_40sdp"
                 android:layout_height="@dimen/_40sdp"
-                android:layout_marginTop="16dp"
-                android:src="@drawable/bell_circle"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.686"
-                app:layout_constraintStart_toEndOf="@+id/AccText"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/bell_circle" />
+        </LinearLayout>
 
         <TextView
             android:layout_width="405dp"
@@ -69,15 +64,22 @@
             android:background="#AD262424" />
     </LinearLayout>
 
-    <RelativeLayout
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_70sdp"
+        android:layout_marginBottom="@dimen/_80sdp"
+        android:background="#F4F2F0"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="69dp" />
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/_650sdp"
-        android:background="@drawable/custom_radio"
-        android:gravity="center"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-7dp"
-        tools:layout_editor_absoluteY="576dp">
+        android:gravity="center">
 
         <ImageButton
             android:id="@+id/add_bantin"
@@ -85,14 +87,6 @@
             android:layout_height="@dimen/_60sdp"
             android:background="@drawable/custom_floating_button"
             android:src="@drawable/add" />
-    </RelativeLayout>
+    </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/_70sdp"
-        android:layout_marginBottom="@dimen/_80sdp"
-        tools:layout_editor_absoluteX="6dp"
-        tools:layout_editor_absoluteY="67dp" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

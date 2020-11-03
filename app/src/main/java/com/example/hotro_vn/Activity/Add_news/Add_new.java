@@ -11,11 +11,12 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.hotro_vn.Activity.Maps.GoogleMaps_Activity;
 import com.example.hotro_vn.Activity.News.News_Activity;
 import com.example.hotro_vn.R;
 
 public class Add_new extends AppCompatActivity {
-    ImageView img;
+    ImageView img,img_location;
     Button btn_luu, btn_dong;
     final Context context = this;
 
@@ -26,6 +27,7 @@ public class Add_new extends AppCompatActivity {
         img = findViewById(R.id.img_back5);
         btn_luu = findViewById(R.id.btn_luu);
         btn_dong = findViewById(R.id.btn_dong);
+        img_location = findViewById(R.id.img_location);
         onlick();
         luu();
     }
@@ -35,6 +37,12 @@ public class Add_new extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 onBackPressed();
+            }
+        });
+        img_location.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Add_new.this, GoogleMaps_Activity.class));
             }
         });
     }

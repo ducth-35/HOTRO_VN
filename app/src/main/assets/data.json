@@ -1,0 +1,74 @@
+{
+  "Country": {
+    "Id": 1,
+    "Name": "Vietnam",
+    "Code": "VN",
+    "ParentId": 0
+  },
+  "Province": [
+    {
+      "Id": 11,
+      "Name": "Hồ chí minh",
+      "Code": "HCM",
+      "ParentId": 11
+    },
+    {
+      "Id": 12,
+      "Name": "Hà nội",
+      "Code": "HN",
+      "ParentId": 12
+    }
+  ],
+  "City": [
+    {
+      "Id": 111,
+      "Name": "Hồ chí minh",
+      "Code": "HCM",
+      "ParentId": 11
+    },
+    {
+      "Id": 121,
+      "Name": "Hà nội",
+      "Code": "HN",
+      "ParentId": 12
+    }
+  ],
+  "District": [
+    {
+      "Id": 1111,
+      "Name": "Quận 1",
+      "Code": "Q1",
+      "ParentId": 111
+    },
+    {
+      "Id": 1112,
+      "Name": "Quận 10",
+      "Code": "Q10",
+      "ParentId": 111
+    },
+    {
+      "Id": 1113,
+      "Name": "Quận 3",
+      "Code": "Q3",
+      "ParentId": 111
+    },
+    {
+      "Id": 1211,
+      "Name": "Quận Đống Đa",
+      "Code": "QDD",
+      "ParentId": 121
+    },
+    {
+      "Id": 1212,
+      "Name": "Quận Hoàng kiếm",
+      "Code": "QHK",
+      "ParentId": 121
+    },
+    {
+      "Id": 1213,
+      "Name": "Quận Ba Đình",
+      "Code": "QBD",
+      "ParentId": 121
+    }
+  ]
+}

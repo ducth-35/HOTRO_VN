@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Add_news.Add_new">
+    tools:context=".Activity.Add_news.Add_new">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -62,10 +63,10 @@
     </LinearLayout>
 
     <ScrollView
+        android:id="@+id/scrollview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_50sdp"
-        android:id="@+id/scrollview"
         android:background="#F4F2F0"
         android:scrollbars="vertical">
 
@@ -75,98 +76,128 @@
             android:orientation="vertical">
 
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="@dimen/_10sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:background="@drawable/custom_radio"
-                android:orientation="vertical">
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-                <LinearLayout
+                <TextView
+                    android:id="@+id/txt_provincial"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:background="@drawable/custom_radio2"
+                    android:gravity="center|left"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_15sdp"
+                    android:text="Chọn tỉnh"
+                    android:textColor="#000"
+                    android:textSize="@dimen/_15sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <EditText
-                        android:id="@+id/chontinh"
-                        android:layout_width="@dimen/_320sdp"
-                        android:layout_height="@dimen/_40sdp"
-                        android:layout_margin="@dimen/_10sdp"
-                        android:background="@drawable/custom_radio2"
-                        android:hint="@string/chontinh"
-                        android:textSize="@dimen/_20sdp"/>
+                <ImageView
+                    android:id="@+id/img_provincial"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:src="@drawable/ic_down_arrow"
+                    app:layout_constraintBottom_toBottomOf="@+id/txt_provincial"
+                    app:layout_constraintEnd_toEndOf="@+id/txt_provincial"
+                    app:layout_constraintStart_toEndOf="@+id/txt_provincial"
+                    app:layout_constraintTop_toTopOf="@+id/txt_provincial" />
 
-                    <Spinner
-                        android:layout_width="@dimen/_30sdp"
-                        android:layout_height="@dimen/_30sdp"
-                        android:id="@+id/spinner_chontinh"
-                        android:layout_gravity="center" />
-                </LinearLayout>
-                <!--                -->
-                <LinearLayout
+                <TextView
+                    android:id="@+id/txt_city"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:background="@drawable/custom_radio2"
+                    android:gravity="center|left"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_15sdp"
+                    android:text="Chọn thành phố"
+                    android:textColor="#000"
+                    android:textSize="@dimen/_15sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_provincial" />
 
-                    <EditText
-                        android:id="@+id/chonthanhpho"
-                        android:layout_width="@dimen/_320sdp"
-                        android:layout_height="@dimen/_40sdp"
-                        android:layout_margin="@dimen/_10sdp"
-                        android:background="@drawable/custom_radio2"
-                        android:hint="@string/chonthanhpho"
-                        android:textSize="@dimen/_20sdp"></EditText>
+                <ImageView
+                    android:id="@+id/img_city"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:src="@drawable/ic_down_arrow"
+                    app:layout_constraintBottom_toBottomOf="@+id/txt_city"
+                    app:layout_constraintEnd_toEndOf="@+id/txt_city"
+                    app:layout_constraintStart_toEndOf="@+id/txt_city"
+                    app:layout_constraintTop_toTopOf="@+id/txt_city" />
 
-                    <Spinner
-                        android:layout_width="@dimen/_30sdp"
-                        android:layout_height="@dimen/_30sdp"
-                        android:id="@+id/spinner_chonthanhpho"
-                        android:layout_gravity="center" />
-                </LinearLayout>
-                <!-- -->
-                <LinearLayout
+                <TextView
+                    android:id="@+id/txt_district"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:background="@drawable/custom_radio2"
+                    android:gravity="center|left"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_15sdp"
+                    android:text="Quận/Huyện/Xã"
+                    android:textColor="#000"
+                    android:textSize="@dimen/_15sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_city" />
 
-                    <EditText
-                        android:id="@+id/quanhuyenxa"
-                        android:layout_width="@dimen/_320sdp"
-                        android:layout_height="@dimen/_40sdp"
-                        android:layout_margin="@dimen/_10sdp"
-                        android:background="@drawable/custom_radio2"
-                        android:hint="@string/quanhuyenxa"
-                        android:textSize="@dimen/_20sdp"></EditText>
+                <ImageView
+                    android:id="@+id/img_district"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:src="@drawable/ic_down_arrow"
+                    app:layout_constraintBottom_toBottomOf="@+id/txt_district"
+                    app:layout_constraintEnd_toEndOf="@+id/txt_district"
+                    app:layout_constraintStart_toEndOf="@+id/txt_district"
+                    app:layout_constraintTop_toTopOf="@+id/txt_district" />
 
-                    <Spinner
-                        android:layout_width="@dimen/_30sdp"
-                        android:layout_height="@dimen/_30sdp"
-                        android:id="@+id/spinner_quanhuyen"
-                        android:layout_gravity="center" />
-                </LinearLayout>
-                <!---->
-                <LinearLayout
+                <TextView
+                    android:id="@+id/txt_location"
                     android:layout_width="match_parent"
-                    android:layout_height="68dp"
-                    android:orientation="horizontal">
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/custom_radio2"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_35sdp"
+                    android:text="Vị trí của bạn"
+                    android:textColor="#000"
+                    android:textSize="@dimen/_15sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_district" />
 
-                    <EditText
-                        android:id="@+id/vịtricuaban"
-                        android:layout_width="@dimen/_320sdp"
-                        android:layout_height="@dimen/_55sdp"
-                        android:layout_margin="@dimen/_10sdp"
-                        android:background="@drawable/custom_radio2"
-                        android:hint="@string/vitricuaban"
-                        android:textSize="@dimen/_20sdp"></EditText>
-
-                    <ImageView
-                        android:layout_width="@dimen/_30sdp"
-                        android:layout_height="@dimen/_30sdp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/location" />
-                </LinearLayout>
-            </LinearLayout>
-            <!--            -->
+                <ImageView
+                    android:id="@+id/img_location"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:src="@drawable/location"
+                    app:layout_constraintBottom_toBottomOf="@+id/txt_location"
+                    app:layout_constraintEnd_toEndOf="@+id/txt_location"
+                    app:layout_constraintTop_toTopOf="@+id/txt_location" />
+            </androidx.constraintlayout.widget.ConstraintLayout>            <!--            -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -178,59 +209,66 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/_18sdp"
-                        android:textColor="@color/black"
                         android:layout_marginLeft="@dimen/_10sdp"
-                        android:text="@string/nguoikeugoi"/>
+                        android:text="@string/nguoikeugoi"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_18sdp" />
+
                     <EditText
                         android:id="@+id/nguoikeugoi"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_40sdp"
                         android:layout_margin="@dimen/_10sdp"
                         android:background="@drawable/custom_radio2"
-                        android:textSize="@dimen/_20sdp"/>
+                        android:textSize="@dimen/_20sdp" />
                 </LinearLayout>
                 <!--                -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/_18sdp"
-                        android:textColor="@color/black"
                         android:layout_marginLeft="@dimen/_10sdp"
-                        android:text="@string/vaitro"/>
+                        android:text="@string/vaitro"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_18sdp" />
+
                     <EditText
                         android:id="@+id/vatro"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_40sdp"
                         android:layout_margin="@dimen/_10sdp"
                         android:background="@drawable/custom_radio2"
-                        android:textSize="@dimen/_20sdp"/>
+                        android:textSize="@dimen/_20sdp" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/_18sdp"
-                        android:textColor="@color/black"
                         android:layout_marginLeft="@dimen/_10sdp"
-                        android:text="@string/dienthoai"/>
+                        android:text="@string/dienthoai"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_18sdp" />
+
                     <EditText
                         android:id="@+id/dienthoai"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_60sdp"
                         android:layout_margin="@dimen/_10sdp"
                         android:background="@drawable/custom_radio2"
-                        android:textSize="@dimen/_20sdp"/>
+                        android:textSize="@dimen/_20sdp" />
                 </LinearLayout>
             </LinearLayout>
             <!--            -->
@@ -245,41 +283,46 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/_18sdp"
-                        android:textColor="@color/black"
                         android:layout_marginLeft="@dimen/_10sdp"
-                        android:text="@string/motatinhhinh"/>
+                        android:text="@string/motatinhhinh"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_18sdp" />
+
                     <EditText
                         android:id="@+id/motatinhhinh"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_65sdp"
                         android:layout_margin="@dimen/_10sdp"
                         android:background="@drawable/custom_radio2"
-                        android:textSize="@dimen/_20sdp"/>
+                        android:textSize="@dimen/_20sdp" />
                 </LinearLayout>
                 <!--                -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/_18sdp"
-                        android:textColor="@color/black"
                         android:layout_marginLeft="@dimen/_10sdp"
-                        android:text="@string/canhotronhunggi"/>
+                        android:text="@string/canhotronhunggi"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_18sdp" />
+
                     <EditText
                         android:id="@+id/canhotronhunggi"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_65sdp"
                         android:layout_margin="@dimen/_10sdp"
                         android:background="@drawable/custom_radio2"
-                        android:textSize="@dimen/_20sdp"/>
+                        android:textSize="@dimen/_20sdp" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -300,16 +343,17 @@
                             android:background="@drawable/image" />
 
                         <TextView
-                            android:textStyle="bold"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/_5sdp"
                             android:text="@string/themanhtinhhinh"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/_20sdp" />
+                            android:textSize="@dimen/_20sdp"
+                            android:textStyle="bold" />
                     </com.google.android.flexbox.FlexboxLayout>
                 </LinearLayout>
             </LinearLayout>
+
             <Button
                 android:id="@+id/btn_luu"
                 android:layout_width="match_parent"
